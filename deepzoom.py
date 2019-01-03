@@ -46,7 +46,7 @@ try:
     import cStringIO
     StringIO = cStringIO
 except ImportError:
-    import StringIO
+    from io import StringIO
 
 import sys
 import time
