@@ -46,7 +46,7 @@ try:
     import cStringIO
     StringIO = cStringIO
 except ImportError:
-    from io import StringIO
+    import io 
 
 import sys
 import time
@@ -479,7 +479,7 @@ def _remove(path):
 
 @retry(6)
 def safe_open(path):
-    return StringIO.StringIO(urllib.urlopen(path).read())
+    return io.StringIO(urllib.urlopen(path).read())
 
 ################################################################################
 
