@@ -479,7 +479,7 @@ def _remove(path):
 
 @retry(6)
 def safe_open(path):
-    return io.StringIO(urllib.urlopen(path).read())
+    return io.StringIO(urllib.request.urlopen(path).read())
 
 ################################################################################
 
